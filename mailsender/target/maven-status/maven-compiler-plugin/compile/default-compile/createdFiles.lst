@@ -1,0 +1,5 @@
+com\mp\mail\SpringEmailTemplateExample.class
+com\mp\mail\MailSenderHelper.class
+com\mp\mail\Mail.class
+com\mp\mail\Mailer.class
+com\mp\mail\Contacto.class
