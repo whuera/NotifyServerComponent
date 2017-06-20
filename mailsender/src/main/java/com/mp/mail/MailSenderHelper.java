@@ -12,7 +12,6 @@ public class MailSenderHelper {
 	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String company = null;
 		if (args[0].equalsIgnoreCase("-receptor") && !args[1].equalsIgnoreCase(null) && !args[2].equalsIgnoreCase(null)){
 			String mailRecord = !args[1].equalsIgnoreCase(null)?args[1].trim():"eduardohuera@gmail.com";
