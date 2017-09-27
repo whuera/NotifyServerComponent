@@ -85,7 +85,8 @@ public class Mailer {
 		StringWriter stringWriter = new StringWriter();
 
 		template.merge(velocityContext, stringWriter);
-		FileSystemResource file = new FileSystemResource("C:\\logs\\BackupServer.log");
+		//FileSystemResource file = new FileSystemResource("C:\\logs\\BackupServer.log");
+		FileSystemResource file = new FileSystemResource("/opt/consumo_mem.txt");
 		try {
 
 			message.setSubject(mail.getMailSubject());
@@ -94,7 +95,8 @@ public class Mailer {
 			helper.setFrom(mail.getMailFrom());
 			helper.setTo(mail.getMailTo());
 			helper.setText(stringWriter.toString(), true);
-			file = new FileSystemResource("C:\\logs\\BackupServer.log");
+			//file = new FileSystemResource("C:\\logs\\BackupServer.log");
+			file = new FileSystemResource("/opt/consumo_mem.txt");
 	        if(file!=null){
 			helper.addAttachment(file.getFilename(), file);}
 			mailSender.send(message);
