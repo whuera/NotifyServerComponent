@@ -2,12 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.autentia.training.spring.mail</groupId>
-	<artifactId>SpringEmail</artifactId>
+	<artifactId>NotifyServerComponentHelper</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>SpringEmail</name>
-	<description>Ejemplo de uso de un servicio de Email en una
-		aplicación con Spring.</description>
+	<version>1.0</version>
+	<name>NotifyServerComponentHelper</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<!-- ========== Spring ========== -->
@@ -90,7 +88,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>SpringEmail</finalName>
+		<finalName>NotifyServerComponentHelper</finalName>
 		<plugins>
 		<plugin>
       <artifactId>maven-assembly-plugin</artifactId>
@@ -127,4 +125,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>Componente de envio de notificaciones</description>
 </project>
