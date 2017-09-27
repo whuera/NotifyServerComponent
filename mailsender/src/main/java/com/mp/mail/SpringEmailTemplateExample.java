@@ -29,7 +29,7 @@ public class SpringEmailTemplateExample {
 	
 	public static void mailSenderHelper(String mailReceptor, String company)
 	{
-		String flgTemplate;
+		String flgTemplate = "emailtemplate.vm";
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
 		Mailer mailer = (Mailer) context.getBean("mailer");
 
@@ -46,7 +46,7 @@ public class SpringEmailTemplateExample {
 
 		Contacto contacto2 = new Contacto();
 		contacto2.setPrimerNombre("Usuario");
-		contacto2.setPrimerApellido("del Sistema Aire.ec");
+		contacto2.setPrimerApellido("del Sistema SmartBid.ec");
 		
 		if(mailReceptor!=null){
 		contacto2.setMailContacto(mailReceptor);
@@ -66,11 +66,19 @@ public class SpringEmailTemplateExample {
 		mail.setMailSubject("Promociones Mobilpymes.com");
 		mail.setTemplateName("emailtemplate.vm");
 		*/
-		flgTemplate = company.equalsIgnoreCase("aireec")?"emailtemplateaire.vm":"emailtemplate.vm";
+		//flgTemplate = company.equalsIgnoreCase("aireec")?"emailtemplateaire.vm":"emailtemplate.vm";
+		if (company.equalsIgnoreCase("aireec"))
+		{
+			flgTemplate = "emailtemplateaire.vm";
+		}else if(company.equalsIgnoreCase("smartbid"))
+		{
+			flgTemplate = "emailtemplatesmartbid.vm";
+		}
+		
 		for (Contacto contactoFinal : listContacto) {
-			mail.setMailFrom("monitoreo@mobilpymes.com");
+			mail.setMailFrom("monitoreoinfraestructura.levelap@gmail.com");
 			mail.setMailTo(contactoFinal.getMailContacto());
-			mail.setMailSubject("Monitoreo Mobilpymes.com");
+			mail.setMailSubject("Monitoreo "+company);
 			mail.setTemplateName(flgTemplate);
 			try {
 				mailer.sendMail(mail, contactoFinal.getPrimerNombre(), contactoFinal.getPrimerApellido());
