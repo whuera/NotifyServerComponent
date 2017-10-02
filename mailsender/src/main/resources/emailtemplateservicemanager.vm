@@ -40,6 +40,11 @@ p.oblique {
 
     }
 
+    h4 {
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 </style>
 
           <script type="text/javascript">
@@ -71,7 +76,7 @@ p.oblique {
         Una soluci&oacute;n completa para saber m&aacute;s de sus clientes o prospectos clientes a un solo click, el sistema contiene:
         <ul>
 <li>Consulta por n&uacute;mero de c&eacute;dula</li>
-<li>Informaci&oacute;n B&aacute;sica por contacto</li>
+<li>Informaci&oacute;n B&aacute;sica por contacto (nombres /correos / tel&eacute;fonos / profesi&oacute;n)</li>
 <li>Informaci&oacute;n de direcciones y Geolocalizaci&oacute;n</li>
 <li>Informaci&oacute;n de relaci&oacute;n comercial, cuentas en Bancos locales, Tarjetas Cr&eacute;dito, compras en establecimientos comerciales</li>
 <br/>
