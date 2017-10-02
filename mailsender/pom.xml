@@ -86,6 +86,11 @@
 		</dependency>
 -->
 
+		<dependency>
+			<groupId>ConexionOracle</groupId>
+			<artifactId>ConexionOracle</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>NotifyServerComponentHelper</finalName>
