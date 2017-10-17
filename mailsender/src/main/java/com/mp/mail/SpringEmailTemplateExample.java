@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import org.apache.velocity.exception.MethodInvocationException;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.app.conn.conexionOracle;
 import com.app.modelo.ContactMail;
+import com.app.modelo.InfoEnterprice;
 import com.app.service.impl.ServiceContactSendMail;
+import com.app.service.impl.ServiceInfoEnterprice;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class SpringEmailTemplateExample.
  */
@@ -26,22 +26,25 @@ public class SpringEmailTemplateExample {
 	 * @param mailReceptor the mail receptor
 	 * @param company the company
 	 */
-	//@Autowired
-	//private static conexionOracle conn;
-	//@Autowired
-	//private static ServiceContactSendMail serviceContactSendMail;
+
 	
-	public static void mailSenderHelper(String mailReceptor, String company)
+	public static void mailSenderHelper(String company)
 	{
 		String flgTemplate = "emailtemplate.vm";
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
+		System.setProperty("host", "smtpout.secureserver.net");
+		System.setProperty("port", "465");
+		System.setProperty("username", "it-services@mobilpymes.cloud");
+		System.setProperty("password","*weho7755*");
+		
 		Mailer mailer = (Mailer) context.getBean("mailer");
 
 		ServiceContactSendMail serviceContactSendMail = new ServiceContactSendMail();
-		
+		ServiceInfoEnterprice serviceInfoEmp = new ServiceInfoEnterprice();
+		InfoEnterprice infoEnterprice =  serviceInfoEmp.getInfoEnterprice(company);
 		//Contacto contacto = new Contacto();
 		ArrayList<ContactMail> listContacto = new ArrayList<ContactMail>();
-		listContacto = serviceContactSendMail.getContacts();
+		listContacto = serviceContactSendMail.getContacts(infoEnterprice.getOccurrences());
 /*
 		contacto.setPrimerNombre("William");
 		contacto.setPrimerApellido("Huera");
@@ -72,6 +75,7 @@ public class SpringEmailTemplateExample {
 		mail.setTemplateName("emailtemplate.vm");
 		*/
 		//flgTemplate = company.equalsIgnoreCase("aireec")?"emailtemplateaire.vm":"emailtemplate.vm";
+		/*
 		if (company.equalsIgnoreCase("aireec"))
 		{
 			flgTemplate = "emailtemplateaire.vm";
@@ -83,9 +87,11 @@ public class SpringEmailTemplateExample {
 		}else if (company.equalsIgnoreCase("mobilpymes")){
 			flgTemplate = "emailtemplate.vm";
 		}
+		*/
+		flgTemplate = infoEnterprice.getNameTemplate();
 		
 		for (ContactMail contactoFinal : listContacto) {
-			mail.setMailFrom("info@mobilpymes.com");
+			mail.setMailFrom(infoEnterprice.getEmpemail());
 			mail.setMailTo(contactoFinal.getEmailcontact());
 			//mail.setMailTo("whuera@gmail.com");
 			mail.setMailSubject("Sistema Data+ (Micro Buro de Información y relación comercial) "+company);
