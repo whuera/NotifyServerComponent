@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
+<style type="text/css" media="all">
+ @import url(cid:id001);
+</style>
+<style>
+p.normal {
+    font-style: normal;
+    
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+    font-size: 75%;
+}
+.textjustify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.panel-transparent {
+        background: none;
+         box-shadow: 0 0 20px black;
+    }
+
+    .panel-transparent .panel-heading{
+        background: rgba(122, 130, 136, 0.2)!important;
+    }
+
+    .panel-transparent .panel-body{
+        background: rgba(46, 51, 56, 0.2)!important;
+
+    }
+
+    h4 {
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+</style>
+
+          <script type="text/javascript">
+    var headID = document.getElementsByTagName("head")[0];
+    var newCss = document.createElement('link');
+    newCss.rel = 'stylesheet';
+    newCss.type = 'text/css';
+    window._botUsername = '650151';
+    window._botName = 'Trevor';
+    newCss.href = "http://rebot.me/assets/css/bot.css";
+    var newScript = document.createElement('script');
+    newScript.src = "http://rebot.me/assets/js/bot.js";
+    newScript.type = 'text/javascript';
+    headID.appendChild(newScript);
+    headID.appendChild(newCss);
+    </script>
+</head>
+	<body background="http://mobilpymes.com/images/fondo-blur-2.jpg">
+    <div class="container">
+	<div align="center">
+		<h3>Estimados, ${firstName} ${lastName}</h3>
+		<p>Nos complace saludarle, y presentarle nuestro nuevo producto :
+		</p>
+<br>
+  <div class="panel-group">
+    <div class="panel panel-default panel-info panel-transparent">
+      <div class="panel-heading"><strong><h4>Data+</h4> MicroBuro de Informaci&oacute;n y relaci&oacute;n comercial</strong></div>
+      <div class="panel-body textjustify">
+        Una soluci&oacute;n completa que integra Inteligencia Artificial para saber m&aacute;s de sus clientes o prospectos clientes a un solo click, el sistema contiene:
+        <ul>
+<li>Consulta por n&uacute;mero de c&eacute;dula</li>
+<li>Informaci&oacute;n B&aacute;sica por contacto (nombres /correos / tel&eacute;fonos / profesi&oacute;n)</li>
+<li>Informaci&oacute;n de direcciones y Geolocalizaci&oacute;n</li>
+<li>Informaci&oacute;n de relaci&oacute;n comercial, cuentas en Bancos locales, Tarjetas Cr&eacute;dito, compras en establecimientos comerciales</li>
+<br/>
+<strong>Nuestra Base de Datos comprende las ciudades m&aacute;s pobladas del Ecuador</strong>
+<br/>
+puede mirar tambi&eacute;n nuestra, <a href="https://sway.com/0Fje2YgtIAKh406j?ref=Link&loc=play">Presentaci&oacute;n online</a>, o preguntale a nuestro asesor virtual: <a href="http://www.mobilpymes.cloud/dataplus.html">Trevor(AI)</a>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+		<div id="header" align="center">
+		<!-- img src="http://mobilpymes.com/images/fondo-blur-3.jpg"/ -->
+	</div>
+		<div>
+   <!--Sending Email Using Spring Smtp Email + Velocity Template from ${location} location.-->
+</div>
+ <footer class="container-fluid text-center">
+    <div align="center">
+  <p>Para mayor informaci&oacute;n sobre el sistema puede solicitar una visita t&eacute;cnica sin ning&uacute;n compromiso, al correo:</p> <a href="mailto:info@mobilpymes.com">info@mobilpymes.com</a>
+  </div>
+  <div align="center">Quito - Ecuador</div>
+  <div align="center">
+  <a href="http://www.mobilpymes.cloud">http://www.mobilpymes.cloud</a>
+  </div>
+  <div align="center">
+  <a href="http://www.mobilpymes.com">http://www.mobilpymes.com</a>
+  </div>
+ 
+</footer>
+</div>
+	</body>
+	</html>
