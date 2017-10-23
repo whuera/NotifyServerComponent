@@ -62,37 +62,41 @@ p.oblique {
     headID.appendChild(newCss);
     </script>
 </head>
-	<body background="http://mobilpymes.com/images/fondo-blur-2.jpg">
+  <body background="http://mobilpymes.com/images/fondo-blur-2.jpg">
     <div class="container">
-	<div align="center">
-		<h3>Estimados, ${firstName} ${lastName}</h3>
-		<p>Nos complace saludarle, y presentarle nuestro nuevo producto :
-		</p>
+  <div align="center">
+    <h3>Estimados, ${firstName} ${lastName}</h3>
+    <p>Nos complace saludarle, y presentarle nuestro nuevo producto :
+    </p>
 <br>
   <div class="panel-group">
     <div class="panel panel-default panel-info panel-transparent">
-      <div class="panel-heading"><strong><h4>Data+</h4> MicroBuro de Informaci&oacute;n y relaci&oacute;n comercial</strong></div>
+      <div class="panel-heading"><strong><h4>PowerFac</h4> Sistema de Facturaci&oacute;n Electr&oacute;nica y relaci&oacute;n comercial</strong></div>
       <div class="panel-body textjustify">
-        Una soluci&oacute;n completa que integra Inteligencia Artificial para saber m&aacute;s de sus clientes o prospectos clientes a un solo click, el sistema contiene:
+        Una soluci&oacute;n completa que integra Inteligencia Artificial para el manejo de su facturaci&oacute;n electr&oacute;nica, el sistema contiene:
         <ul>
-<li>Consulta por n&uacute;mero de c&eacute;dula</li>
-<li>Informaci&oacute;n B&aacute;sica por contacto (nombres /correos / tel&eacute;fonos / profesi&oacute;n)</li>
-<li>Informaci&oacute;n de direcciones y Geolocalizaci&oacute;n</li>
-<li>Informaci&oacute;n de relaci&oacute;n comercial, cuentas en Bancos locales, Tarjetas Cr&eacute;dito, compras en establecimientos comerciales</li>
+          <li>Emisi&oacute;n y Gesti&oacute;n de procesos de facturaci&oacute;n electr&oacute;nica, autorizados por el SRI</li>
+          <li>Control y Gesti&oacute;n de Inventarios</li>
+          <li>Consultas por n&uacute;mero de Factura, c&eacute;dula </li>
+          <li>Informaci&oacute;n B&aacute;sica por contacto (nombres /correos / tel&eacute;fonos / profesi&oacute;n)</li>
+          <li>Informaci&oacute;n de direcciones y Geolocalizaci&oacute;n</li>
+          <li>Informaci&oacute;n de relaci&oacute;n comercial, cuentas en Bancos locales, Tarjetas Cr&eacute;dito, compras en establecimientos comerciales (MicroBuro de cr&eacute;dito)</li>
+          <li>Integraci&oacute;n con cualquier sistema de inventarios y facturaci&oacute;n</li>
+          <li><strong>Funcionamiento en cualquier plataforma (Windows / Linux)</strong></li>
 <br/>
-<strong>Nuestra Base de Datos comprende las ciudades m&aacute;s pobladas del Ecuador</strong>
+<strong>Contiene Base de Datos de informaci&oacute;n de clientes de las ciudades m&aacute;s pobladas del Ecuador</strong>
 <br/>
-puede mirar tambi&eacute;n nuestra, <a href="https://sway.com/0Fje2YgtIAKh406j?ref=Link&loc=play">Presentaci&oacute;n online</a>, o preguntale a nuestro asesor virtual: <a href="http://www.mobilpymes.cloud/dataplus.html">Trevor(AI)</a>
+puede mirar tambi&eacute;n nuestra, <a href="http://www.mobilpymes.cloud/dataplus.html">Presentaci&oacute;n online</a>
 </ul>
 
       </div>
     </div>
   </div>
 </div>
-		<div id="header" align="center">
-		<!-- img src="http://mobilpymes.com/images/fondo-blur-3.jpg"/ -->
-	</div>
-		<div>
+    <div id="header" align="center">
+    <!-- img src="http://mobilpymes.com/images/fondo-blur-3.jpg"/ -->
+  </div>
+    <div>
    <!--Sending Email Using Spring Smtp Email + Velocity Template from ${location} location.-->
 </div>
  <footer class="container-fluid text-center">
@@ -109,5 +113,5 @@ puede mirar tambi&eacute;n nuestra, <a href="https://sway.com/0Fje2YgtIAKh406j?r
  
 </footer>
 </div>
-	</body>
-	</html>
+  </body>
+  </html>
