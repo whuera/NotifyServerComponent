@@ -15,12 +15,11 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Mailer.
  */
 public class Mailer {
-	
+
 	/** The velocity engine. */
 	private VelocityEngine velocityEngine;
 
@@ -30,7 +29,8 @@ public class Mailer {
 	/**
 	 * Sets the mail sender.
 	 *
-	 * @param mailSender the new mail sender
+	 * @param mailSender
+	 *            the new mail sender
 	 */
 	public void setMailSender(JavaMailSender mailSender) {
 		this.mailSender = mailSender;
@@ -39,7 +39,8 @@ public class Mailer {
 	/**
 	 * Sets the velocity engine.
 	 *
-	 * @param velocityEngine the new velocity engine
+	 * @param velocityEngine
+	 *            the new velocity engine
 	 */
 	public void setVelocityEngine(VelocityEngine velocityEngine) {
 		this.velocityEngine = velocityEngine;
@@ -48,13 +49,20 @@ public class Mailer {
 	/**
 	 * Send mail.
 	 *
-	 * @param mail the mail
-	 * @param nombre the nombre
-	 * @param apellido the apellido
-	 * @throws ResourceNotFoundException the resource not found exception
-	 * @throws ParseErrorException the parse error exception
-	 * @throws MethodInvocationException the method invocation exception
-	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @param mail
+	 *            the mail
+	 * @param nombre
+	 *            the nombre
+	 * @param apellido
+	 *            the apellido
+	 * @throws ResourceNotFoundException
+	 *             the resource not found exception
+	 * @throws ParseErrorException
+	 *             the parse error exception
+	 * @throws MethodInvocationException
+	 *             the method invocation exception
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
 	 */
 	public void sendMail(Mail mail, String nombre, String apellido)
 			throws ResourceNotFoundException, ParseErrorException, MethodInvocationException, IOException {
@@ -78,27 +86,24 @@ public class Mailer {
 		}
 
 		VelocityContext velocityContext = new VelocityContext();
-		velocityContext.put("firstName", nombre);
-		velocityContext.put("lastName", apellido);
+		velocityContext.put("firstName", !nombre.equals(null) ? nombre : "N/A");
+		velocityContext.put("lastName", !apellido.equals(null) ? apellido : "N/A");
 		velocityContext.put("location", "UIO");
 		velocityContext.setAllowRendering(true);
 		StringWriter stringWriter = new StringWriter();
-
 		template.merge(velocityContext, stringWriter);
-		//FileSystemResource file = new FileSystemResource("C:\\logs\\BackupServer.log");
-		FileSystemResource file = new FileSystemResource("/home/whuera/Documents/CartaPresentacion-Mobilpymes.pdf");
+		FileSystemResource file = new FileSystemResource(mail.getPathFileAttach());
 		try {
-
 			message.setSubject(mail.getMailSubject());
 			MimeMessageHelper helper;
 			helper = new MimeMessageHelper(message, true);
 			helper.setFrom(mail.getMailFrom());
 			helper.setTo(mail.getMailTo());
 			helper.setText(stringWriter.toString(), true);
-			//file = new FileSystemResource("C:\\logs\\BackupServer.log");
-			file = new FileSystemResource("/home/whuera/Documents/CartaPresentacion-Mobilpymes.pdf");
-	        if(file!=null){
-			helper.addAttachment(file.getFilename(), file);}
+			file = new FileSystemResource(mail.getPathFileAttach());
+			if (file != null) {
+				helper.addAttachment(file.getFilename(), file);
+			}
 			mailSender.send(message);
 
 		} catch (Exception ex) {

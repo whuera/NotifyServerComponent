@@ -30,7 +30,8 @@ public class ControllerEmailTemplate {
 	 *            the company
 	 */
 
-	public static void mailSenderHelper(String company) {
+	public static boolean mailSenderHelper(String company, String tipo) {
+		boolean valReturn = false;
 		String flgTemplate = "emailtemplate.vm";
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
 		System.setProperty("host", "smtpout.secureserver.net");
@@ -49,7 +50,7 @@ public class ControllerEmailTemplate {
 
 		boolean valCompany = true;
 		if (!company.equalsIgnoreCase("DUMMY")) {
-			listContacto = serviceContactSendMail.getContacts(infoEnterprice.getOccurrences());
+			listContacto = serviceContactSendMail.getContacts(tipo, infoEnterprice.getOccurrences());			
 		} else if (company.equalsIgnoreCase("DUMMY")) {
 			ContactMail dummyMail = new ContactMail();
 			dummyMail.setId(10213);
@@ -69,11 +70,13 @@ public class ControllerEmailTemplate {
 
 			mail.setMailSubject(infoEnterprice.getEmailSubject());
 			mail.setTemplateName(flgTemplate);
+			mail.setPathFileAttach(infoEnterprice.getPathFile());
 			try {
 				mailer.sendMail(mail, contactoFinal.getNames(), "");
 				if (valCompany) {
 					serviceContactSendMail.updateStatusMail(contactoFinal.getId());
 				}
+				valReturn = true;
 			} catch (ResourceNotFoundException e) {
 
 				e.printStackTrace();
@@ -89,7 +92,7 @@ public class ControllerEmailTemplate {
 			}
 			contactoFinal = null;
 		}
-
+return valReturn;
 	}
 
 }
