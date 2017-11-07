@@ -36,7 +36,7 @@ p.oblique {
     }
 
     .panel-transparent .panel-body{
-        background: rgba(46, 51, 56, 0.2)!important;
+        background: rgba(255, 255, 255, 0.7)!important;
 
     }
 
@@ -62,7 +62,7 @@ p.oblique {
     headID.appendChild(newCss);
     </script>
 </head>
-  <body background="http://mobilpymes.com/images/fondo-blur-2.jpg">
+  <body background="http://mobilpymes.com/images/mobilpymesfondo.jpg">
     <div class="container">
   <div align="center">
     <h3>Estimados, ${firstName} ${lastName}</h3>
