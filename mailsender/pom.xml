@@ -1,14 +1,27 @@
 ﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.autentia.training.spring.mail</groupId>
-	<artifactId>SpringEmail</artifactId>
+	<groupId>com.app.mailsender</groupId>
+	<artifactId>NotifyServerComponentHelper</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>SpringEmail</name>
-	<description>Ejemplo de uso de un servicio de Email en una
-		aplicación con Spring.</description>
+	<version>1.0</version>
+	<name>NotifyServerComponentHelper</name>
 	<url>http://maven.apache.org</url>
+	
+		
+	<distributionManagement>
+    <repository>
+        <id>nexus</id>
+        <name>Releases</name>
+        <url>http://localhost:8081/repository/local-maven-repo/</url>
+    </repository>
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>Snapshot</name>
+        <url>http://localhost:8081/repository/local-maven-repo/</url>
+    </snapshotRepository>
+</distributionManagement>
+	
 	<dependencies>
 		<!-- ========== Spring ========== -->
 		<dependency>
@@ -57,7 +70,20 @@
 		<!-- https://mvnrepository.com/artifact/fr.matthieu-vergne/ioutils-core -->
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 
+	<!-- https://mvnrepository.com/artifact/org.sonarsource.sonarqube/sonar-plugin-api -->
+<dependency>
+    <groupId>org.sonarsource.sonarqube</groupId>
+    <artifactId>sonar-plugin-api</artifactId>
+    <version>6.6-RC1</version>
+</dependency>
 
+<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/cobertura-maven-plugin -->
+<dependency>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>cobertura-maven-plugin</artifactId>
+    <version>2.7</version>
+    <scope>test</scope>
+</dependency>
 
 
 		<!-- ========== Test ========== -->
@@ -88,9 +114,16 @@
 		</dependency>
 -->
 
+		<dependency>
+			<groupId>ConexionOracle</groupId>
+			<artifactId>ConexionOracle</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
+
+	
 	<build>
-		<finalName>SpringEmail</finalName>
+		<finalName>NotifyServerComponentHelper</finalName>
 		<plugins>
 		<plugin>
       <artifactId>maven-assembly-plugin</artifactId>
@@ -127,4 +160,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<description>Componente de envio de notificaciones</description>
 </project>

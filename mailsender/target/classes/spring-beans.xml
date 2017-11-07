@@ -15,8 +15,8 @@
   <!-- property name="" value="text/html"/--> 
   <property name="host" value="mail.mobilpymes.com" />
   <property name="port" value="587" />
-  <property name="username" value="monitoreo@mobilpymes.com" />
-  <property name="password" value="monitoreomp2017" />
+  <property name="username" value="publicidad@mobilpymes.com" />
+  <property name="password" value="publicidadmp2017" />
   <property name="javaMailProperties">
   
 

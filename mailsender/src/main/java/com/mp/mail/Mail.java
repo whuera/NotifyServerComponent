@@ -30,8 +30,19 @@ public class Mail {
 
 	 /** The content type. */
  	private String contentType;
+ 	
+ 	private String pathFileAttach;
+ 	
 
-	 /**
+	 public String getPathFileAttach() {
+		return pathFileAttach;
+	}
+
+	public void setPathFileAttach(String pathFileAttach) {
+		this.pathFileAttach = pathFileAttach;
+	}
+
+	/**
  	 * Instantiates a new mail.
  	 */
  	public Mail() {
