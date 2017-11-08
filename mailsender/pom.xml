@@ -6,8 +6,7 @@
 	<version>1.0</version>
 	<name>NotifyServerComponentHelper</name>
 	<url>http://maven.apache.org</url>
-	
-		
+			
 	<distributionManagement>
     <repository>
         <id>nexus</id>
