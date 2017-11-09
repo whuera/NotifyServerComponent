@@ -16,7 +16,7 @@
   <property name="host" value="smtp.gmail.com" />
   <property name="port" value="587" />
   <property name="username" value="publicidadmobilpymes@gmail.com" />
-  <property name="password" value="weho7755" />
+  <property name="password" value="publicidadmp2017" />
   <property name="javaMailProperties">
   
 
